@@ -1,0 +1,145 @@
+#UserName
+#Selector con ID
+WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'LoginPanel0_Username')))
+driver.find_element(By.ID,'LoginPanel0_Username').send_keys(UserName)
+time.sleep(2)
+
+#Selector con Xpath
+WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="LoginPanel0_Username"]')))
+driver.find_element(By.XPATH, '//*[@id="LoginPanel0_Username"]').send_keys(UserName)
+
+#Selector con FullXpath
+WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//html/body/div[1]/div[1]/div[1]/form/div[1]/div/div/div[1]/input')))
+driver.find_element(By.XPATH, '//html/body/div[1]/div[1]/div[1]/form/div[1]/div/div/div[1]/input').send_keys(UserName)
+time.sleep(2)
+
+#Password
+#Selector con ID
+WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'LoginPanel0_Password')))
+driver.find_element(By.ID,'LoginPanel0_Password').send_keys(Password)
+time.sleep(2)	
+
+#Selector con Xpath
+WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="LoginPanel0_Password"]')))
+driver.find_element(By.XPATH, '//*[@id="LoginPanel0_Password"]').send_keys(Password)
+
+#Selector con FullXpath
+WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//html/body/div[1]/div[1]/div[1]/form/div[1]/div/div/div[2]/input')))
+driver.find_element(By.XPATH, '//html/body/div[1]/div[1]/div[1]/form/div[1]/div/div/div[2]/input').send_keys(Password)
+time.sleep(2)
+
+
+
+#Organization
+//*[@id="nav_menu1_3"]/li[1]/a/span
+//*[@id="nav_menu1_3"]/li[1]/a
+/html/body/aside/div[2]/div[2]/div[1]/ul/li[3]/ul/li[1]/a/span
+document.querySelector("#nav_menu1_3 > li:nth-child(1) > a > span")
+
+
+#Business Units
+//*[@id="nav_menu1_3_1"]/li[1]/a/span
+/html/body/aside/div[2]/div[2]/div[1]/ul/li[3]/ul/li[1]/ul/li[1]/a/span
+document.querySelector("#nav_menu1_3_1 > li:nth-child(1) > a > span")
+
+
+#Nuevo Business Unit
+//*[@id="GridDiv"]/div[2]/div[2]/div/div/div[1]/div/span
+/html/body/main/section/div/div[2]/div[2]/div/div/div[1]/div/span
+document.querySelector("#GridDiv > div.grid-toolbar.s-Serenity-Toolbar.s-Toolbar.clearfix > div.tool-buttons > div > div > div.tool-button.add-button.icon-tool-button > div > span")
+
+
+#Name
+//*[@id="Serenity_Pro_Organization_BusinessUnitDialog8_Name"]
+/html/body/div[4]/div[2]/div/div[2]/form/div/div[1]/div/div/div[1]/input
+document.querySelector("#Serenity_Pro_Organization_BusinessUnitDialog8_Name")
+
+
+#Parent Unit
+//*[@id="s2id_Serenity_Pro_Organization_BusinessUnitDialog8_ParentUnitId"]/a/span[2]
+/html/body/div[4]/div[2]/div/div[2]/form/div/div[1]/div/div/div[2]/div[1]/a/span[2]
+document.querySelector("#s2id_Serenity_Pro_Organization_BusinessUnitDialog8_ParentUnitId > a > span.select2-arrow")
+
+
+#Acme Corp
+//*[@id="select2-result-label-20"]
+/html/body/div[7]/ul/li[1]/div
+document.querySelector("#select2-result-label-20")
+
+#BtnSalvar
+//*[@id="Serenity_Pro_Organization_BusinessUnitDialog3_Toolbar"]/div/div/div/div[1]/div/span
+/html/body/div[4]/div[2]/div/div[1]/div/div/div/div[1]/div/span
+document.querySelector("#Serenity_Pro_Organization_BusinessUnitDialog3_Toolbar > div > div > div > div.tool-button.save-and-close-button.icon-tool-button > div > span")
+
+
+#Reunion
+//*[@id="nav_menu1_3"]/li[2]/a/span
+/html/body/aside/div[2]/div[2]/div[1]/ul/li[3]/ul/li[2]/a/span
+document.querySelector("#nav_menu1_3 > li:nth-child(2) > a > span")
+
+
+#Reuniones
+//*[@id="nav_menu1_3_2"]/li[1]/a/span
+/html/body/aside/div[2]/div[2]/div[1]/ul/li[3]/ul/li[2]/ul/li[1]/a/span
+document.querySelector("#nav_menu1_3_2 > li:nth-child(1) > a > span")
+
+
+#NuevaReunion
+//*[@id="GridDiv"]/div[2]/div[2]/div/div/div[1]/div/span
+/html/body/main/section/div/div[2]/div[2]/div/div/div[1]/div/span
+document.querySelector("#GridDiv > div.grid-toolbar.s-Serenity-Toolbar.s-Toolbar.clearfix > div.tool-buttons > div > div > div.tool-button.add-button.icon-tool-button > div > span")
+
+
+#Meeting Name
+//*[@id="Serenity_Pro_Meeting_MeetingDialog10_MeetingName"]
+/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[1]/input
+document.querySelector("#Serenity_Pro_Meeting_MeetingDialog10_MeetingName")
+
+
+#Meeting Type
+//*[@id="s2id_Serenity_Pro_Meeting_MeetingDialog10_MeetingTypeId"]/a/span[2]
+/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[2]/div[1]/a/span[2]
+document.querySelector("#s2id_Serenity_Pro_Meeting_MeetingDialog10_MeetingTypeId > a > span.select2-arrow")
+
+#Strategy
+//*[@id="select2-result-label-23"]
+/html/body/div[6]/ul/li[5]/div
+document.querySelector("#select2-results-6 > li:nth-child(5)")
+
+
+#Meeting Number
+//*[@id="Serenity_Pro_Meeting_MeetingDialog10_MeetingNumber"]
+/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[3]/input
+document.querySelector("#Serenity_Pro_Meeting_MeetingDialog10_MeetingNumber")
+
+
+#Start Date
+//*[@id="Serenity_Pro_Meeting_MeetingDialog10_StartDate"]
+/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[4]/input
+document.querySelector("#Serenity_Pro_Meeting_MeetingDialog10_StartDate")
+
+
+#Hora
+//*[@id="Serenity_Pro_Meeting_MeetingDialog10_PropertyGrid"]/div/div/div[4]/select
+/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[4]/select
+document.querySelector("#Serenity_Pro_Meeting_MeetingDialog10_PropertyGrid > div > div > div.field.StartDate.col-sm-6 > select")
+  #Option
+  //*[@id="Serenity_Pro_Meeting_MeetingDialog10_PropertyGrid"]/div/div/div[4]/select/option[29]
+  /html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[4]/select/option[29]
+
+
+#End Date
+//*[@id="Serenity_Pro_Meeting_MeetingDialog10_EndDate"]
+/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[5]/input
+document.querySelector("#Serenity_Pro_Meeting_MeetingDialog10_EndDate")
+
+
+#Hora
+//*[@id="Serenity_Pro_Meeting_MeetingDialog10_PropertyGrid"]/div/div/div[5]/select
+/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[5]/select
+document.querySelector("#Serenity_Pro_Meeting_MeetingDialog10_PropertyGrid > div > div > div.field.EndDate.col-sm-6 > select")
+  #Option
+  //*[@id="Serenity_Pro_Meeting_MeetingDialog10_PropertyGrid"]/div/div/div[5]/select/option[37]
+  /html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[5]/select/option[181]
+  
+
