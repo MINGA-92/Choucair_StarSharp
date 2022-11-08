@@ -26,13 +26,14 @@ global MeetingNumber
 global EndDate
 Url= "https://serenity.is/demo/"
 NameBusinessUnit= "Testing..."
-NameMeeting= "****/****"
+NameMeeting= "Testing Automation"
 MeetingNumber= "1111"
 Date= "11/28/2022"
 
+
 def AgendamientoReunion():
 	try:
-		"""#Organization
+		#Organization
 		try:
 			#Selector con Xpath
 			WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="nav_menu1_3"]/li[1]/a/span')))
@@ -73,7 +74,6 @@ def AgendamientoReunion():
 				driver.find_element(By.ID,'GridDiv').click()
 			time.sleep(2)
 
-
 		#Name
 		try:
 			#Selector con FullXpath
@@ -108,8 +108,6 @@ def AgendamientoReunion():
 				WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'s2id_Serenity_Pro_Organization_BusinessUnitDialog8_ParentUnitId')))
 				driver.find_element(By.ID,'s2id_Serenity_Pro_Organization_BusinessUnitDialog8_ParentUnitId').click()
 			time.sleep(2)
-
-
 		#Option AcmeCorp
 		try:
 			#Selector con FullXpath
@@ -146,7 +144,9 @@ def AgendamientoReunion():
 			time.sleep(2)
 
 		print("¡Business Unit Creado Con Exito!   😏")
-		"""
+
+
+
 		#Meeting
 		try:
 			try:
@@ -187,7 +187,7 @@ def AgendamientoReunion():
 					driver.find_element(By.ID,'GridDiv').click()
 				time.sleep(2)
 
-
+			
 			#NameMeeting
 			try:
 				#Selector con Xpath
@@ -410,8 +410,194 @@ def AgendamientoReunion():
 					driver.find_element(By.ID,'Serenity_Pro_Meeting_MeetingDialog10_PropertyGrid').click()
 				time.sleep(2)
 
+			
+			#Location
+			try:
+				#Selector con Xpath
+				WebDriverWait(driver, 28).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="s2id_Serenity_Pro_Meeting_MeetingDialog10_LocationId"]/a/span[2]')))
+				driver.find_element(By.XPATH, '//*[@id="s2id_Serenity_Pro_Meeting_MeetingDialog10_LocationId"]/a/span[2]').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con FullXpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[6]/div[1]/a/span[2]')))
+					driver.find_element(By.XPATH, '//html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[6]/div[1]/a/span[2]').click()
+				except:
+					#Selector con ID
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'s2id_Serenity_Pro_Meeting_MeetingDialog10_LocationId')))
+					driver.find_element(By.ID,'s2id_Serenity_Pro_Meeting_MeetingDialog10_LocationId').click()
+				time.sleep(2)
+			#Option Location
+			try:
+				#Selector con FullXpath
+				WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//html/body/div[7]/ul/li[4]/div/span')))
+				driver.find_element(By.XPATH, '//html/body/div[7]/ul/li[4]/div/span').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con Xpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="select2-result-label-11"]/span')))
+					driver.find_element(By.XPATH, '//*[@id="select2-result-label-11"]/span').click()
+				except:
+					pyautogui.press('enter')
+				time.sleep(4)
+			
+			#Unit
+			try:
+				#Selector con FullXpath
+				WebDriverWait(driver, 28).until(EC.visibility_of_element_located((By.XPATH,'//html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[7]/div[1]/a/span[2]')))
+				driver.find_element(By.XPATH, '//html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[7]/div[1]/a/span[2]').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con Xpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="s2id_Serenity_Pro_Meeting_MeetingDialog10_UnitId"]/a/span[2]')))
+					driver.find_element(By.XPATH, '//*[@id="s2id_Serenity_Pro_Meeting_MeetingDialog10_UnitId"]/a/span[2]').click()
+				except:
+					#Selector con ID
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'s2id_Serenity_Pro_Meeting_MeetingDialog10_UnitId')))
+					driver.find_element(By.ID,'s2id_Serenity_Pro_Meeting_MeetingDialog10_UnitId').click()
+				time.sleep(2)
+			#Option Unit
+			try:
+				#Selector con Xpath
+				WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="select2-result-label-399"]')))
+				driver.find_element(By.XPATH, '//*[@id="select2-result-label-399"]').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con FullXpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//html/body/div[8]/ul/li[4]/div')))
+					driver.find_element(By.XPATH, '//html/body/div[8]/ul/li[4]/div').click()
+				except:
+					#Selector con ID
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'select2-result-label-399')))
+					driver.find_element(By.ID,'select2-result-label-399').click()
+				time.sleep(2)
 
+			
+			#Organized By
+			try:
+				#Selector con FullXpath
+				WebDriverWait(driver, 28).until(EC.visibility_of_element_located((By.XPATH,'//html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[8]/div[1]/a/span[2]')))
+				driver.find_element(By.XPATH, '//html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[8]/div[1]/a/span[2]').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con Xpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="s2id_Serenity_Pro_Meeting_MeetingDialog10_OrganizerContactId"]/a/span[2]')))
+					driver.find_element(By.XPATH, '//*[@id="s2id_Serenity_Pro_Meeting_MeetingDialog10_OrganizerContactId"]/a/span[2]').click()
+				except:
+					#Selector con ID
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'s2id_Serenity_Pro_Meeting_MeetingDialog10_OrganizerContactId')))
+					driver.find_element(By.ID,'s2id_Serenity_Pro_Meeting_MeetingDialog10_OrganizerContactId').click()
+				time.sleep(2)
+			#Option Organized By
+			try:
+				#Selector con Xpath
+				WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="select2-result-label-57"]')))
+				driver.find_element(By.XPATH, '//*[@id="select2-result-label-57"]').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con FullXpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//html/body/div[7]/ul/li[20]/div')))
+					driver.find_element(By.XPATH, '//html/body/div[7]/ul/li[20]/div').click()
+				except:
+					#Selector con ID
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'select2-result-label-57')))
+					driver.find_element(By.ID,'select2-result-label-57').click()
+				time.sleep(2)
+
+
+			#Reporter
+			try:
+				#Selector con FullXpath
+				WebDriverWait(driver, 28).until(EC.visibility_of_element_located((By.XPATH,'//html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[9]/div[1]/a/span[2]')))
+				driver.find_element(By.XPATH, '//html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[9]/div[1]/a/span[2]').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con Xpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="s2id_Serenity_Pro_Meeting_MeetingDialog10_ReporterContactId"]/a/span[2]')))
+					driver.find_element(By.XPATH, '//*[@id="s2id_Serenity_Pro_Meeting_MeetingDialog10_ReporterContactId"]/a/span[2]').click()
+				except:
+					#Selector con ID
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'s2id_Serenity_Pro_Meeting_MeetingDialog10_ReporterContactId')))
+					driver.find_element(By.ID,'s2id_Serenity_Pro_Meeting_MeetingDialog10_ReporterContactId').click()
+				time.sleep(2)
+			#Option Reporter
+			try:
+				#Selector con Xpath
+				WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="select2-result-label-164"]')))
+				driver.find_element(By.XPATH, '//*[@id="select2-result-label-164"]').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con FullXpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//html/body/div[8]/ul/li[27]/div')))
+					driver.find_element(By.XPATH, '//html/body/div[8]/ul/li[27]/div').click()
+				except:
+					#Selector con ID
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'select2-result-label-164')))
+					driver.find_element(By.ID,'select2-result-label-164').click()
+				time.sleep(2)
+
+
+			#Attendee List
+			try:
+				#Selector con FullXpath
+				WebDriverWait(driver, 28).until(EC.visibility_of_element_located((By.XPATH,'//html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[10]/div[1]/div[1]/div[2]/a/span[2]')))
+				driver.find_element(By.XPATH, '//html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[10]/div[1]/div[1]/div[2]/a/span[2]').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con Xpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="s2id_autogen11"]/a/span[2]')))
+					driver.find_element(By.XPATH, '//*[@id="s2id_autogen11"]/a/span[2]').click()
+				except:
+					#Selector con ID
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'s2id_autogen11')))
+					driver.find_element(By.ID,'s2id_autogen11').click()
+				time.sleep(2)
+			#Option Attendee List
+			try:
+				#Selector con Xpath
+				WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="select2-result-label-304"]')))
+				driver.find_element(By.XPATH, '//*[@id="select2-result-label-304"]').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con FullXpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//html/body/div[9]/ul/li[67]/div')))
+					driver.find_element(By.XPATH, '//html/body/div[9]/ul/li[67]/div').click()
+				except:
+					#Selector con ID
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'select2-result-label-304')))
+					driver.find_element(By.ID,'select2-result-label-304').click()
+				time.sleep(2)
+
+
+			#Salvar Reunion
+			try:
+				#Selector con FullXpath
+				WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//html/body/main/section/div[2]/div[2]/div[1]/div[1]/div/div/div/div[1]/div')))
+				driver.find_element(By.XPATH, '//html/body/main/section/div[2]/div[2]/div[1]/div[1]/div/div/div/div[1]/div').click()
+				time.sleep(2)
+			except:
+				try:
+					#Selector con Xpath
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="Serenity_Pro_Meeting_MeetingDialog10_Toolbar"]/div/div/div/div[1]/div')))
+					driver.find_element(By.XPATH, '//*[@id="Serenity_Pro_Meeting_MeetingDialog10_Toolbar"]/div/div/div/div[1]/div').click()
+				except:
+					#Selector con ID
+					WebDriverWait(driver, 11).until(EC.visibility_of_element_located((By.ID,'Serenity_Pro_Meeting_MeetingDialog10_Toolbar')))
+					driver.find_element(By.ID,'Serenity_Pro_Meeting_MeetingDialog10_Toolbar').click()
+				time.sleep(2)
+
+			print("¡Proceso Complwto Finalizado Con Exito!   😏")
 			print(" - 😏😏😏 - ")
+
 		except Exception as e:
 			print("☠ eRrOr Meeting:", e)
 			raise e	
@@ -455,7 +641,6 @@ def Logueo():
 		time.sleep(4)
 		ChromeDriverInicial()
 
-#Logueo()
 
 def ChromeDriverInicial():
 
